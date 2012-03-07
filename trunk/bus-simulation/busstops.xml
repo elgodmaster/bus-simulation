@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusStops>
+    <BusStop>
+        <id>0</id>
+        <name>Samfundet</name>
+        <latitude>63</latitude>
+        <longtitude>10</longtitude>
+    </BusStop>
+    <BusStop>
+        <id>1</id>
+        <name>Munkegata</name>
+        <latitude>64</latitude>
+        <longtitude>9</longtitude>
+    </BusStop>
+</BusStops>

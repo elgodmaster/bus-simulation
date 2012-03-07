@@ -1,18 +1,13 @@
 #include <iostream>
-#include "BusStop.h"
+#include "Simulation.h"
 
 using namespace std;
 
 int main(){
-    BusStop busStop1;
-    BusStop busStop2;
-    BusStop busStop3(busStop1);
-    BusStop busStop4;
+    loadSimulationData();
 
-    busStop2=busStop1;
+    foreach(BusStop bs, BusStop::busStops())
+        cout<<bs<<endl;
 
-    cout << busStop1 << endl;
-    cout << busStop2 << endl;
-    cout << busStop3 << endl;
-    cout << busStop4 << endl;
+    saveSimulationData();
 }
