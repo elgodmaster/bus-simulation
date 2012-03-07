@@ -2,7 +2,7 @@ SOURCES += \
     main.cpp \
     busline.cpp \
     busstop.cpp \
-    BusPlan.cpp
+    busplan.cpp
 
 HEADERS += \
     busline.h \
