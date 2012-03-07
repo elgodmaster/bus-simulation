@@ -4,6 +4,8 @@
 #include <QString>
 #include <QMap>
 #include <iostream>
+#include <QXmlStreamReader>
+#include <QXmlStreamWriter>
 
 class BusStopInternal
 {
@@ -26,8 +28,11 @@ public:
     QString name() const;
     int id() const;
 
-    QString toString() const;
+    static void load();
+    static void save();
+    static QList<BusStop> busStops();
 private:
+    BusStop(BusStopInternal *bsp);
     BusStopInternal *_busStopInternal;
     static QMap<int,BusStopInternal*> _busStops;
 };
