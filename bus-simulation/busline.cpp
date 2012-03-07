@@ -186,3 +186,9 @@ void BusLine::save()
     xml.writeEndDocument();
     file->close();
 }
+
+BusLine BusLine::busLineById(int id)
+{
+    assert(_busLines.contains(id));
+    return BusLine(_busLines[id]);
+}

@@ -27,6 +27,7 @@ public:
     static void save();
 
     static QList<BusLine> busLines();
+    static BusLine busLineById(int id);
 private:
     BusLine(BusLinePrivate *blp);
     BusLinePrivate *_busLinePrivate;
