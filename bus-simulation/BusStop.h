@@ -31,6 +31,7 @@ public:
     static void load();
     static void save();
     static QList<BusStop> busStops();
+    static BusStop busStopById(int id);
 private:
     BusStop(BusStopInternal *bsp);
     BusStopInternal *_busStopInternal;

@@ -1,4 +1,4 @@
-#include "BusStop.h"
+#include "busstop.h"
 #include <QFile>
 #include <cassert>
 #include <QDir>
@@ -143,4 +143,10 @@ void BusStop::save()
 BusStop::BusStop(BusStopInternal *bsp)
 {
     _busStopInternal = bsp;
+}
+
+BusStop BusStop::busStopById(int id)
+{
+    assert(_busStops.contains(id));
+    return BusStop(_busStops[id]);
 }

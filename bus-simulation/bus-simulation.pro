@@ -1,6 +1,12 @@
 SOURCES += \
     main.cpp \
-    BusStop.cpp
+    busline.cpp \
+    busstop.cpp
 
 HEADERS += \
-    BusStop.h
+    busline.h \
+    busstop.h \
+    simulation.h
+
+OTHER_FILES += \
+    busstops.xml

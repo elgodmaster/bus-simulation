@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusLines>
+    <BusLine>
+        <id>0</id>
+        <name>60 - Samfundet</name>
+        <busStops>
+            <BusStop>
+                <id>0</id>
+                <offset>0</offset>
+            </BusStop>
+            <BusStop>
+                <id>1</id>
+                <offset>4.3</offset>
+            </BusStop>
+        </busStops>
+    </BusLine>
+    <BusLine>
+        <id>1</id>
+        <name>63 - Munkegata</name>
+        <busStops>
+            <BusStop>
+                <id>1</id>
+                <offset>0</offset>
+            </BusStop>
+            <BusStop>
+                <id>0</id>
+                <offset>4.5</offset>
+            </BusStop>
+        </busStops>
+    </BusLine>
+</BusLines>
