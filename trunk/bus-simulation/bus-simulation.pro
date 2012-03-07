@@ -1,7 +1,8 @@
 SOURCES += \
     main.cpp \
     busline.cpp \
-    busstop.cpp
+    busstop.cpp \
+    BusPlan.cpp
 
 HEADERS += \
     busline.h \
