@@ -6,11 +6,8 @@ using namespace std;
 int main(){
     loadSimulationData();
 
-    foreach(BusStop bs, BusStop::busStops())
-        cout<<bs<<endl;
-
-    foreach( BusLine bl, BusLine::busLines())
-        cout<<bl<<endl;
+    foreach( BusPlan bp, BusPlan::busPlans())
+        cout<<bp<<endl;
 
     saveSimulationData();
 }

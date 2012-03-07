@@ -7,7 +7,8 @@ SOURCES += \
 HEADERS += \
     busline.h \
     busstop.h \
-    simulation.h
+    simulation.h \
+    busplan.h
 
 OTHER_FILES += \
     busstops.xml
