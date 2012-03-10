@@ -12,4 +12,10 @@
         <latitude>64</latitude>
         <longtitude>9</longtitude>
     </BusStop>
+    <BusStop>
+        <id>2</id>
+        <name>Tempe</name>
+        <latitude>65</latitude>
+        <longtitude>10</longtitude>
+    </BusStop>
 </BusStops>
