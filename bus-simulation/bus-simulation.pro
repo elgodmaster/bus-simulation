@@ -8,7 +8,8 @@ HEADERS += \
     busline.h \
     busstop.h \
     simulation.h \
-    busplan.h
+    busplan.h \
+    commutertrip.h
 
 OTHER_FILES += \
     busstops.xml
