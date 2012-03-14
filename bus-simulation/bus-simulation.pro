@@ -2,14 +2,15 @@ SOURCES += \
     main.cpp \
     busline.cpp \
     busstop.cpp \
-    busplan.cpp
+    busplan.cpp \
+    commutertrip.cpp
 
 HEADERS += \
     busline.h \
     busstop.h \
     simulation.h \
     busplan.h \
-    commutertrip.h
+    commutertrip.h \
+    tripstatistic.h
 
-OTHER_FILES += \
-    busstops.xml
+OTHER_FILES +=

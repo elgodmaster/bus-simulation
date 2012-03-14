@@ -9,5 +9,10 @@ int main(){
     foreach( BusPlan bp, BusPlan::busPlans())
         cout<<bp<<endl;
 
+    foreach( CommuterTrip ct, CommuterTrip::commuterTrips())
+        cout << ct << endl;
+
+
+
     saveSimulationData();
 }
