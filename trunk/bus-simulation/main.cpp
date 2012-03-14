@@ -12,7 +12,8 @@ int main(){
     foreach( CommuterTrip ct, CommuterTrip::commuterTrips())
         cout << ct << endl;
 
-
+    foreach(TripStatistic ts, TripStatistic::tripStatistics())
+        cout << ts << endl;
 
     saveSimulationData();
 }
