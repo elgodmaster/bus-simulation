@@ -8,6 +8,7 @@
 using namespace std;
 
 QMultiMap<QPair<int,int>,CommuterTripPrivate*> CommuterTrip::_commuterTrips;
+int CommuterTrip::_numberOfDays;
 
 void CommuterTrip::loadFromGroupedSet()
 {
@@ -27,6 +28,8 @@ void CommuterTrip::loadFromGroupedSet()
     {
         xml.readNextStartElement();
         assert(xml.name()=="GroupedCommuterTrips");
+        assert(xml.attributes().size()==1);
+        CommuterTrip::_numberOfDays = xml.attributes().first().value().toString().toInt();
 
         xml.readNextStartElement();
         while(xml.name()!="GroupedCommuterTrips")
@@ -222,4 +225,9 @@ QList<CommuterTrip> CommuterTrip::commuterTrips()
         ret.append(CommuterTrip(ctp));
     }
     return ret;
+}
+
+int CommuterTrip::numberOfDays()
+{
+    return _numberOfDays;
 }

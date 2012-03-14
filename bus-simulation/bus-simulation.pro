@@ -3,7 +3,8 @@ SOURCES += \
     busline.cpp \
     busstop.cpp \
     busplan.cpp \
-    commutertrip.cpp
+    commutertrip.cpp \
+    tripstatistic.cpp
 
 HEADERS += \
     busline.h \

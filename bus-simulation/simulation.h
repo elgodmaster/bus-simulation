@@ -5,6 +5,7 @@
 #include "busline.h"
 #include "busplan.h"
 #include "commutertrip.h"
+#include "tripstatistic.h"
 
 void loadSimulationData()
 {
@@ -12,6 +13,7 @@ void loadSimulationData()
     BusLine::load();
     BusPlan::load();
     CommuterTrip::loadFromGroupedSet();
+    TripStatistic::load();
 }
 void saveSimulationData()
 {
