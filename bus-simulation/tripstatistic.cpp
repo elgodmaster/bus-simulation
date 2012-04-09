@@ -84,3 +84,34 @@ BusStop TripStatistic::to() const
 {
     return BusStop::busStopById(tripStatisticPrivate->to);
 }
+
+EventList TripStatistic::generateNewCommuterEvents(){
+    EventList ret = EventList();
+    foreach(TripStatisticPrivate* tsp,_tripStatistics.values())
+    {
+        BusStop from =BusStop::busStopById(tsp->from);
+        BusStop to =BusStop::busStopById(tsp->to);
+        for(int hour = 0; hour<24; hour++)
+        {
+            double frequency = tsp->frequencies.at(hour);
+            int tests = frequency*2;
+            double lastProbability = frequency - ((double)tests)/2;
+            int numberToBeGenerated = 0;
+            for(int i = 0; i<tests; i++)
+            {
+                if(rand()%2==0)
+                    numberToBeGenerated++;
+            }
+            if((rand()%10000)<(lastProbability*10000))
+                numberToBeGenerated++;
+            for(int i = 0;i<numberToBeGenerated;i++)
+            {
+                double minute = rand()%60;
+                double second = rand()%60;
+                NewCommuterEvent *nce = new NewCommuterEvent(hour*60+minute+second/60,from,to);
+                ret.addEvent(nce);
+            }
+        }
+    }
+    return ret;
+}

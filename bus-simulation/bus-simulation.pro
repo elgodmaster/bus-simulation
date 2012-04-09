@@ -4,7 +4,9 @@ SOURCES += \
     busstop.cpp \
     busplan.cpp \
     commutertrip.cpp \
-    tripstatistic.cpp
+    tripstatistic.cpp \
+    event.cpp \
+    bus.cpp
 
 HEADERS += \
     busline.h \
@@ -12,6 +14,8 @@ HEADERS += \
     simulation.h \
     busplan.h \
     commutertrip.h \
-    tripstatistic.h
+    tripstatistic.h \
+    event.h \
+    bus.h
 
 OTHER_FILES +=

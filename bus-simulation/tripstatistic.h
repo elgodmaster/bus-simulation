@@ -3,6 +3,7 @@
 
 #include "tripstatistic.h"
 #include "BusStop.h"
+#include "event.h"
 #include <QList>
 #include <QPair>
 
@@ -26,6 +27,7 @@ public:
     static void load();
 
     static QList<TripStatistic> tripStatistics();
+    static EventList generateNewCommuterEvents();
 private:
     TripStatistic(TripStatisticPrivate *ctp);
     TripStatisticPrivate *tripStatisticPrivate;

@@ -172,7 +172,7 @@ void BusPlan::save()
     current.cdUp();
     current.cd("bus-simulation");
     QDir::setCurrent(current.absolutePath());
-    QFile* file = new QFile("busplans1.xml");
+    QFile* file = new QFile("busplans.xml");
     assert(file->open(QIODevice::WriteOnly | QIODevice::Text));
     QXmlStreamWriter xml(file);
 
@@ -213,4 +213,10 @@ void BusPlan::save()
     xml.writeEndElement();
     xml.writeEndDocument();
     file->close();
+}
+
+EventList BusPlan::generateBusEvents() const
+{
+    assert(false);
+    return EventList();
 }
