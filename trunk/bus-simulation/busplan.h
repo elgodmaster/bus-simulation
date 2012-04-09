@@ -2,6 +2,7 @@
 #define BUSPLAN_H
 
 #include "busline.h"
+#include "event.h"
 #include <QMap>
 #include <QString>
 #include <QList>
@@ -31,6 +32,7 @@ public:
     static void save();
 
     static QList<BusPlan> busPlans();
+    EventList generateBusEvents() const;
 private:
     BusPlan(BusPlanPrivate *bpp);
     BusPlanPrivate *_busPlanPrivate;
