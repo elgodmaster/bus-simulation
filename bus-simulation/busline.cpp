@@ -39,6 +39,11 @@ BusLine::BusLine(BusLinePrivate *blp)
 
 void BusLine::load()
 {
+    BusLinePrivate *notInRoute = new BusLinePrivate;
+    notInRoute->id = NOT_IN_ROUTE;
+    notInRoute->name = "Ikke i rute";
+    _busLines.insert(NOT_IN_ROUTE,notInRoute);
+
     QDir current = QDir::current();
     current.cdUp();
     current.cd("bus-simulation");

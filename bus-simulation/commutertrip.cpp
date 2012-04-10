@@ -12,7 +12,6 @@ int CommuterTrip::_numberOfDays;
 
 void CommuterTrip::loadFromGroupedSet()
 {
-
     QDir current = QDir::current();
     current.cdUp();
     current.cd("bus-simulation");

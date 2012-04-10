@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BusLines>
     <BusLine>
+        <id>-1</id>
+        <name>Ikke i rute</name>
+        <busStops/>
+    </BusLine>
+    <BusLine>
         <id>0</id>
         <name>60 - Samfundet</name>
         <busStops>

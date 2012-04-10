@@ -150,3 +150,13 @@ BusStop BusStop::busStopById(int id)
     assert(_busStops.contains(id));
     return BusStop(_busStops[id]);
 }
+
+double BusStop::getTravelTime(const BusStop &bs1, const BusStop &bs2)
+{
+    return sqrt(pow(bs1.latitude()-bs2.latitude(),2)+pow(bs1.longtitude()-bs2.longtitude(),2))*2;
+}
+
+void BusStop::addCommuter(const Commuter &commuter)
+{
+    _busStopInternal->commuters.append(commuter.id());
+}

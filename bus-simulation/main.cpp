@@ -20,20 +20,33 @@ int main(){
     //    cout << ts << endl;
 
     EventList newCommuterEvents = TripStatistic::generateNewCommuterEvents();
+    //foreach(Event *event , newCommuterEvents){
+    //    cout << *((NewCommuterEvent*)event) << endl;
+    //}
 
-    foreach(Event *event , newCommuterEvents){
-        cout << *((NewCommuterEvent*)event) << endl;
+    EventList busEvents = BusPlan::busPlans().at(0).generateBusEvents(BusStop::busStopById(0));
+    EventList eventList = newCommuterEvents+busEvents;
+    //cout << eventList << endl;
+
+    //foreach(Event *event , busEvents){
+    //    if(event->type()==Event::BUS_AT_STOP_EVENT)
+    //        cout << *((BusAtStopEvent*)event) << endl;
+    //    else if(event->type()==Event::BUS_CHANGE_LINE_EVENT)
+    //        cout << *((BusChangeLineEvent*)event) << endl;
+    //    else
+    //        assert(false);
+    //}
+
+    simulate(eventList);
+
+    foreach(Commuter commuter,Commuter::commuters())
+    {
+        cout << commuter.eventList() << endl;
     }
 
-    EventList busEvents = BusPlan::busPlans().at(0).generateBusEvents();
-
-    foreach(Event *event , busEvents){
-        if(event->type()==Event::BUS_AT_STOP_EVENT)
-            cout << *((BusAtStopEvent*)event) << endl;
-        else if(event->type()==Event::BUS_CHANGE_LINE_EVENT)
-            cout << *((BusChangeLineEvent*)event) << endl;
-        else
-            assert(false);
+    foreach(Bus bus,Bus::buses())
+    {
+        cout << bus.eventList() << endl;
     }
 
     saveSimulationData();

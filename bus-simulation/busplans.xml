@@ -16,8 +16,12 @@
                         <minute>20</minute>
                     </offset>
                     <offset>
-                        <hour>10</hour>
-                        <minute>40</minute>
+                        <hour>11</hour>
+                        <minute>10</minute>
+                    </offset>
+                    <offset>
+                        <hour>11</hour>
+                        <minute>30</minute>
                     </offset>
                 </offsets>
             </BusLine>
@@ -25,16 +29,20 @@
                 <id>1</id>
                 <offsets>
                     <offset>
-                        <hour>8</hour>
+                        <hour>10</hour>
                         <minute>15</minute>
                     </offset>
                     <offset>
-                        <hour>8</hour>
-                        <minute>30</minute>
+                        <hour>10</hour>
+                        <minute>20</minute>
                     </offset>
                     <offset>
-                        <hour>8</hour>
-                        <minute>45</minute>
+                        <hour>11</hour>
+                        <minute>25</minute>
+                    </offset>
+                    <offset>
+                        <hour>11</hour>
+                        <minute>30</minute>
                     </offset>
                 </offsets>
             </BusLine>

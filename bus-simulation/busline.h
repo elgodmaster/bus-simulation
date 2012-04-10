@@ -28,6 +28,8 @@ public:
 
     static QList<BusLine> busLines();
     static BusLine busLineById(int id);
+
+    static const int NOT_IN_ROUTE = -1;
 private:
     BusLine(BusLinePrivate *blp);
     BusLinePrivate *_busLinePrivate;
