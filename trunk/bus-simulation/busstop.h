@@ -1,6 +1,8 @@
 #ifndef BUSSTOP_H
 #define BUSSTOP_H
 
+#include "commuter.h"
+#include <QList>
 #include <QString>
 #include <QMap>
 #include <iostream>
@@ -14,6 +16,7 @@ public:
     double longtitude;
     QString name;
     int id;
+    QList<int> commuters;
 private:
 };
 
@@ -28,10 +31,13 @@ public:
     QString name() const;
     int id() const;
 
+    void addCommuter(const Commuter& commuter);
+
     static void load();
     static void save();
     static QList<BusStop> busStops();
     static BusStop busStopById(int id);
+    static double getTravelTime(const BusStop& bs1, const BusStop& bs2);
 private:
     BusStop(BusStopInternal *bsp);
     BusStopInternal *_busStopInternal;

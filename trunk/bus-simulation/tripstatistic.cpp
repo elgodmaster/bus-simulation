@@ -2,6 +2,8 @@
 #include "commutertrip.h"
 using namespace std;
 
+#include <QDebug>
+
 
 int  TripStatistic::_numberOfDays;
 QMap<QPair<int,int>,TripStatisticPrivate*> TripStatistic::_tripStatistics;

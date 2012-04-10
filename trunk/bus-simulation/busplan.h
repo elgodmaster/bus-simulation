@@ -32,7 +32,7 @@ public:
     static void save();
 
     static QList<BusPlan> busPlans();
-    EventList generateBusEvents() const;
+    EventList generateBusEvents(const BusStop& terminal) const;
 private:
     BusPlan(BusPlanPrivate *bpp);
     BusPlanPrivate *_busPlanPrivate;
